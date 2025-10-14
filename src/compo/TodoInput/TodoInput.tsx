@@ -5,11 +5,10 @@ import useTaskStore from "../../Context/States/taskStore";
 
 const TodoInput = () => {
   const [task, setTask] = useState("");
+  const [status, setStatus] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
   
-  
-
   const addToTask = useTaskStore((state) => state.addToTask);
 
   const handleAddTask: React.FormEventHandler = (e) => {
@@ -18,10 +17,12 @@ const TodoInput = () => {
     const newTask = {
       id: Date.now(),
       taskname: task,
+      status: "In-Progress",  
     }
 
     addToTask(newTask);
     setTask("");
+    setStatus("");
     setIsOpen(false);
   };
 
@@ -51,6 +52,14 @@ const TodoInput = () => {
                 onChange={(e) => setTask(e.target.value)}
                 className="w-full px-4 py-2 bg-gray-50 border border-gray-300 text-gray-900 border rounded-lg focus:outline-none focus:ring focus:ring-purple-300"
                 placeholder="Enter your task..."
+              />
+              
+              <input
+                type="text"
+                value={status}
+                onChange={(e) => setStatus(e.target.value)}
+                className="w-full px-4 py-2 bg-gray-50 border border-gray-300 text-gray-900 border rounded-lg focus:outline-none focus:ring focus:ring-purple-300"
+                placeholder="Enter your status..."
               />
               
               <div className="flex justify-end gap-3">
