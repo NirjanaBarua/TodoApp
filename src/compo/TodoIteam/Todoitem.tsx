@@ -1,5 +1,6 @@
 import { Edit, X } from "lucide-react";
 import useTaskStore from "../../Context/States/taskStore";
+import EditInput from "../EditInput/EditInput";
 
 
 
@@ -8,6 +9,7 @@ export type TaskProps = {
         id: number;
         taskname: string;
         status: string;
+        isEditing?: boolean; 
 
     }
 }
@@ -15,7 +17,7 @@ export type TaskProps = {
 
 const TodoItem = ({ task }: TaskProps) => {
 
-
+    const editTask = useTaskStore((state) => state.editTask);
     const deleteTask = useTaskStore((state) => state.deleteTask);
     const toggleStatus = useTaskStore((state) => state.toggleStatus);
 
@@ -37,14 +39,17 @@ const TodoItem = ({ task }: TaskProps) => {
 
                     <p>{task.status}</p>
                     <div className="justify-around card-actions">
-                        <Edit></Edit>
+                        <Edit
+                            onClick={() => editTask(task.id,{ ...task, isEditing: true })}
+                        ></Edit>
+                        {task.isEditing && <EditInput task={task}></EditInput> }
                         <X onClick={() => deleteTask(task.id)}></X>
 
                     </div>
                 </div>
             </div>
 
-        </div>
+        </div >
     );
 };
 
