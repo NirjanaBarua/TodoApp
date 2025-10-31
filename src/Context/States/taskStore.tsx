@@ -13,7 +13,6 @@ type taskItem = {
 type taskStore = {
     task: taskItem[];
     addToTask: (item: taskItem) => void;
-    editTask: (id: number,item: taskItem) => void;
     deleteTask: (id: number) => void;
     toggleStatus: (id: number) => void;
 }
@@ -24,12 +23,6 @@ const useTaskStore = create<taskStore>()(
             task: [],
             addToTask: (item) => set((state) => ({
                 task: [...state.task, item],
-            })),
-
-            editTask:(id,updatedData)=>set((state)=>({
-                task: state.task.map((t) => t.id === id ? {
-                    ...t,...updatedData
-                } : t)
             })),
 
             deleteTask: (id) => set((state) => ({
