@@ -1,5 +1,5 @@
-import  { useState } from "react";
-import useTaskStore from "../../Context/States/taskStore";
+import { useState } from "react";
+import useTaskStore, { type taskItem } from "../../Context/States/taskStore";
 import { CrossIcon } from "lucide-react";
 
 const TodoInput = () => {
@@ -7,18 +7,19 @@ const TodoInput = () => {
   const [status, setStatus] = useState("");
   const addToTask = useTaskStore((state) => state.addToTask);
 
-  const handleAddTask = (e) => {
+  const handleAddTask = (e: React.FormEvent) => {
     e.preventDefault();
-    const newTask = {
+    const newTask: taskItem = {
       id: Date.now(),
       taskname: task,
-      status: "In-Progress",
+      status: "In-Progress",   
     };
     addToTask(newTask);
     setTask("");
     setStatus("");
     // Close the modal after submission
-    document.getElementById("add_task_modal").checked = false;
+    const modal = document.getElementById("add_task_modal") as HTMLInputElement | null;
+    if (modal) modal.checked = false;
   };
 
   return (
@@ -27,7 +28,7 @@ const TodoInput = () => {
       <label htmlFor="add_task_modal">
         <CrossIcon className="mt-2 cursor-pointer bg-gray-800 hover:bg-gray-900 w-8 h-8 p-1 rounded-md text-white" />
       </label>
-      
+
 
       {/* Modal */}
       <input type="checkbox" id="add_task_modal" className="modal-toggle" />

@@ -2,7 +2,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-type taskItem = {
+export type taskItem = {
     id: number;
     taskname: string;
     status: "In-Progress" | "Completed";
@@ -10,7 +10,7 @@ type taskItem = {
 
 }
 
-type taskStore = {
+export type taskStore = {
     task: taskItem[];
     addToTask: (item: taskItem) => void;
     deleteTask: (id: number) => void;
