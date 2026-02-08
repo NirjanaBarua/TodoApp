@@ -1,3 +1,14 @@
+# Todo App
+A modern Todo application with instant UI updates and real-time task management.
+# Features
+## Homepage
+### Displays all tasks in a clean card layout
+
+
+
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
