@@ -28,3 +28,15 @@ A modern Todo application with instant UI updates and real-time task management.
 
 # Demo
 Check out the live demo here: https://todo-app-iu7e.vercel.app/
+
+# Screenshots
+
+<img width="1890" height="807" alt="Screenshot 2026-02-09 000333" src="https://github.com/user-attachments/assets/89815aed-84b7-4bcb-b4fb-7f7010592512" />
+
+<img width="1878" height="853" alt="Screenshot 2026-02-09 000358" src="https://github.com/user-attachments/assets/00ca54b2-a272-4e9c-af91-2757c2b75c78" />
+
+<img width="1898" height="841" alt="Screenshot 2026-02-09 000426" src="https://github.com/user-attachments/assets/9dc6fbce-1f32-4e6f-8c46-0ec2006d77f7" />
+
+<img width="1882" height="790" alt="Screenshot 2026-02-09 000439" src="https://github.com/user-attachments/assets/e318e99a-f077-4936-b2c3-39c9127655a9" />
+
+
