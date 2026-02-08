@@ -7,9 +7,9 @@ A modern Todo application with instant UI updates and real-time task management.
 ### Homepage:
 1. Displays all tasks in a clean card layout.
 2. Shows dynamic statistics:
-- Total Tasks
-- Completed Tasks
-- Remaining Tasks
+  - Total Tasks
+  - Completed Tasks
+  - Remaining Tasks
 3. Add new tasks instantly. 
 4. Delete tasks functionality.
 5. Mark tasks as completed/in-progress.
@@ -21,7 +21,6 @@ A modern Todo application with instant UI updates and real-time task management.
 
 # Technologies Used
 
-### Frontend:
 - React
 - Tailwind CSS
 - Tailwind CSS
@@ -29,13 +28,3 @@ A modern Todo application with instant UI updates and real-time task management.
 
 # Demo
 Check out the live demo here: https://todo-app-iu7e.vercel.app/
-
-
-
-
-
-
-    },
-  },
-])
-```
