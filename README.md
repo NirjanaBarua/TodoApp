@@ -23,7 +23,7 @@ A modern Todo application with instant UI updates and real-time task management.
 
 - React
 - Tailwind CSS
-- Tailwind CSS
+- Typescript
 - Zustand (State Management)
 
 # Demo
